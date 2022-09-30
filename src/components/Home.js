@@ -1,8 +1,8 @@
-import React from "react";
-import { Redirect } from "react-router-dom";
+import React, {useState} from "react";
 
-function Home({ isLoggedIn }) {
-  if (!isLoggedIn) return <Redirect to="/login" />;
+export default function Home({ isSignedIn }) {
+  const Redirect = useState()
+  if (!isSignedIn) return <Redirect to="/login" />;
 
   return (
     <div>
@@ -10,5 +10,3 @@ function Home({ isLoggedIn }) {
     </div>
   );
 }
-
-export default Home;
